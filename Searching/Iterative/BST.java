@@ -5,8 +5,8 @@ class Node{
         key=x;
     }
 }
+
 public class BST {
-    
     public static void main(String[] args) {
         Node root=new Node(15);
         root.left=new Node(5);
@@ -16,23 +16,24 @@ public class BST {
         root.right.left.left=new Node(16);
         root.right.right=new Node(80);
 
-        int x=6;
+        int x=18;
 
-        if (search(root,x)){
+        if(search(root,x)){
             System.out.println("Found");
-        }else {
+        }else{
             System.out.println("Not Found");
         }
     }
+
     public static boolean search(Node root, int x){
         while(!(root==null)){
             if(root.key==x){
                 return true;
             }else if(root.key>x){
-                root=root.left;
+                root = root.left;
             }else if(root.key<x){
-                root=root.right;
-            }
+                root = root.right;
+            }   
         }
         return false;
     }

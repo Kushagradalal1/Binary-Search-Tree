@@ -1,6 +1,6 @@
-/*class Node{
+class Node{
     int key;
-    Node left,right;
+    Node left, right;
     Node(int x){
         key=x;
     }
@@ -17,22 +17,23 @@ public class BST {
 
         int x=16;
 
-        if (search(root,x)){
+        if(search(root,x)){
             System.out.println("Found");
-        }else {
+        }else{
             System.out.println("Not Found");
         }
     }
+
     public static boolean search(Node root, int x){
-        if (root==null){
+        if(root==null){
             return false;
-        } else if (root.key==x) {
+        }else if(root.key==x){
             return true;
-        } else if (root.key>x) {
-            return search(root.left,x);
-        } else {
-            return search(root.right,x);
+        }
+        else if(root.key>x){
+            return search(root.left, x);
+        }else{
+            return search(root.right, x);
         }
     }
 }
-*/
