@@ -7,6 +7,9 @@ public class BST {
         s.add("gfg");
         s.add("course");
         s.add("identity");
+
+        //Duplicates elements are not allowed..
+        s.add("course");
         System.out.println(s);
         //Contains
         boolean b=s.contains("identity");
